@@ -1,0 +1,17 @@
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesionario.Application.csproj.AssemblyReference.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesionario.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesionario.Application.AssemblyInfoInputs.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesionario.Application.AssemblyInfo.cs
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesionario.Application.csproj.CoreCompileInputs.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\bin\Debug\net8.0\Concesionario.Application.deps.json
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\bin\Debug\net8.0\Concesionario.Application.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\bin\Debug\net8.0\Concesionario.Application.pdb
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\bin\Debug\net8.0\Concesionario.Data.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\bin\Debug\net8.0\Concesionario.Domain.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\bin\Debug\net8.0\Concesionario.Data.pdb
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\bin\Debug\net8.0\Concesionario.Domain.pdb
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesio.BA99962C.Up2Date
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesionario.Application.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\refint\Concesionario.Application.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesionario.Application.pdb
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\ref\Concesionario.Application.dll

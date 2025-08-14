@@ -1,0 +1,393 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA5F2CB-187B-48FD-B413-F181A36DD876}|concesionaria\\Concesionario.Api.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FA5F2CB-187B-48FD-B413-F181A36DD876}|concesionaria\\Concesionario.Api.csproj|solutionrelative:concesionaria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\repositories\\efrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\repositories\\efrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria.application\\services\\vehicles\\vehiclemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|solutionrelative:concesionaria.application\\services\\vehicles\\vehiclemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria.application\\interfaces\\ivehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|solutionrelative:concesionaria.application\\interfaces\\ivehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA5F2CB-187B-48FD-B413-F181A36DD876}|concesionaria\\Concesionario.Api.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FA5F2CB-187B-48FD-B413-F181A36DD876}|concesionaria\\Concesionario.Api.csproj|solutionrelative:concesionaria\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria.application\\dto\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|solutionrelative:concesionaria.application\\dto\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria.application\\dto\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|solutionrelative:concesionaria.application\\dto\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria.application\\dto\\vehicles\\vehicleresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|solutionrelative:concesionaria.application\\dto\\vehicles\\vehicleresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria.application\\dto\\vehicles\\vehiclerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|solutionrelative:concesionaria.application\\dto\\vehicles\\vehiclerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA5F2CB-187B-48FD-B413-F181A36DD876}|concesionaria\\Concesionario.Api.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FA5F2CB-187B-48FD-B413-F181A36DD876}|concesionaria\\Concesionario.Api.csproj|solutionrelative:concesionaria\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionaria.application\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1365B11-6357-42D9-8876-28584BA4A542}|Concesionaria.Application\\Concesionario.Application.csproj|solutionrelative:concesionaria.application\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1153195F-BC85-4383-8E4D-D8F7ACAE72E1}|Concesionario.Domain\\Concesionario.Domain.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.domain\\entities\\vehicles\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1153195F-BC85-4383-8E4D-D8F7ACAE72E1}|Concesionario.Domain\\Concesionario.Domain.csproj|solutionrelative:concesionario.domain\\entities\\vehicles\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1153195F-BC85-4383-8E4D-D8F7ACAE72E1}|Concesionario.Domain\\Concesionario.Domain.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1153195F-BC85-4383-8E4D-D8F7ACAE72E1}|Concesionario.Domain\\Concesionario.Domain.csproj|solutionrelative:concesionario.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\migrations\\20250810004646_finalauthenticate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\migrations\\20250810004646_finalauthenticate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\migrations\\authenticatecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\migrations\\authenticatecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\data\\migrations\\concesionariocontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\data\\migrations\\concesionariocontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\data\\migrations\\20250809222931_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\data\\migrations\\20250809222931_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\concesionariocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\concesionariocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\authenticatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\authenticatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\identity\\applicationuseridentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\identity\\applicationuseridentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|c:\\users\\lvs_1\\desktop\\concesionaria\\concesionaria\\concesionario.data\\migrations\\applicationdb\\20250811191045_initialapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05FCF99F-4EFD-4DA2-AB1E-A65A0052F766}|Concesionario.Data\\Concesionario.Data.csproj|solutionrelative:concesionario.data\\migrations\\applicationdb\\20250811191045_initialapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\concesionaria\\Program.cs",
+              "RelativeDocumentMoniker": "concesionaria\\Program.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\concesionaria\\Program.cs",
+              "RelativeToolTip": "concesionaria\\Program.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAD0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T10:54:21.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VehicleRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Dto\\Vehicles\\VehicleRequestDto.cs",
+              "RelativeDocumentMoniker": "Concesionaria.Application\\Dto\\Vehicles\\VehicleRequestDto.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Dto\\Vehicles\\VehicleRequestDto.cs",
+              "RelativeToolTip": "Concesionaria.Application\\Dto\\Vehicles\\VehicleRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T10:55:56.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IVehicleService.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Interfaces\\IVehicleService.cs",
+              "RelativeDocumentMoniker": "Concesionaria.Application\\Interfaces\\IVehicleService.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Interfaces\\IVehicleService.cs",
+              "RelativeToolTip": "Concesionaria.Application\\Interfaces\\IVehicleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T00:51:03.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VehicleManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Services\\Vehicles\\VehicleManagementService.cs",
+              "RelativeDocumentMoniker": "Concesionaria.Application\\Services\\Vehicles\\VehicleManagementService.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Services\\Vehicles\\VehicleManagementService.cs",
+              "RelativeToolTip": "Concesionaria.Application\\Services\\Vehicles\\VehicleManagementService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBUAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T10:53:37.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EfRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Repositories\\EfRepository.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\Repositories\\EfRepository.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Repositories\\EfRepository.cs",
+              "RelativeToolTip": "Concesionario.Data\\Repositories\\EfRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T15:03:50.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthenticateController.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\concesionaria\\Controllers\\AuthenticateController.cs",
+              "RelativeDocumentMoniker": "concesionaria\\Controllers\\AuthenticateController.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\concesionaria\\Controllers\\AuthenticateController.cs",
+              "RelativeToolTip": "concesionaria\\Controllers\\AuthenticateController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswB4AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T10:58:59.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Dto\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "Concesionaria.Application\\Dto\\RegisterModel.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Dto\\RegisterModel.cs",
+              "RelativeToolTip": "Concesionaria.Application\\Dto\\RegisterModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T13:10:21.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Dto\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Concesionaria.Application\\Dto\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Dto\\LoginModel.cs",
+              "RelativeToolTip": "Concesionaria.Application\\Dto\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T11:36:34.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VehicleResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Dto\\Vehicles\\VehicleResponseDto.cs",
+              "RelativeDocumentMoniker": "Concesionaria.Application\\Dto\\Vehicles\\VehicleResponseDto.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Dto\\Vehicles\\VehicleResponseDto.cs",
+              "RelativeToolTip": "Concesionaria.Application\\Dto\\Vehicles\\VehicleResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T11:12:59.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Concesionario.Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB4AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T10:55:05.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\concesionaria\\Controllers\\VehicleController.cs",
+              "RelativeDocumentMoniker": "concesionaria\\Controllers\\VehicleController.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\concesionaria\\Controllers\\VehicleController.cs",
+              "RelativeToolTip": "concesionaria\\Controllers\\VehicleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T19:52:39.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "Concesionaria.Application\\Services\\JwtTokenService.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionaria.Application\\Services\\JwtTokenService.cs",
+              "RelativeToolTip": "Concesionaria.Application\\Services\\JwtTokenService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T11:19:14.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Domain\\Entities\\Vehicles\\Vehicle.cs",
+              "RelativeDocumentMoniker": "Concesionario.Domain\\Entities\\Vehicles\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Domain\\Entities\\Vehicles\\Vehicle.cs",
+              "RelativeToolTip": "Concesionario.Domain\\Entities\\Vehicles\\Vehicle.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T10:56:44.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Domain\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "Concesionario.Domain\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Domain\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "Concesionario.Domain\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T15:03:22.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20250811191045_InitialApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Migrations\\ApplicationDb\\20250811191045_InitialApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\Migrations\\ApplicationDb\\20250811191045_InitialApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Migrations\\ApplicationDb\\20250811191045_InitialApplicationDbContext.cs",
+              "RelativeToolTip": "Concesionario.Data\\Migrations\\ApplicationDb\\20250811191045_InitialApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T19:10:46.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250810004646_FinalAuthenticate.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Migrations\\20250810004646_FinalAuthenticate.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\Migrations\\20250810004646_FinalAuthenticate.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Migrations\\20250810004646_FinalAuthenticate.cs",
+              "RelativeToolTip": "Concesionario.Data\\Migrations\\20250810004646_FinalAuthenticate.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T18:50:28.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthenticateContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Migrations\\AuthenticateContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\Migrations\\AuthenticateContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Migrations\\AuthenticateContextModelSnapshot.cs",
+              "RelativeToolTip": "Concesionario.Data\\Migrations\\AuthenticateContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T19:09:13.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ConcesionarioContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Data\\Migrations\\ConcesionarioContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\Data\\Migrations\\ConcesionarioContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Data\\Migrations\\ConcesionarioContextModelSnapshot.cs",
+              "RelativeToolTip": "Concesionario.Data\\Data\\Migrations\\ConcesionarioContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T18:51:06.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20250809222931_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Data\\Migrations\\20250809222931_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\Data\\Migrations\\20250809222931_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Data\\Migrations\\20250809222931_InitialCreate.cs",
+              "RelativeToolTip": "Concesionario.Data\\Data\\Migrations\\20250809222931_InitialCreate.cs",
+              "ViewState": "AgIAABgBAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T18:50:59.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ConcesionarioContext.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\ConcesionarioContext.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\ConcesionarioContext.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\ConcesionarioContext.cs",
+              "RelativeToolTip": "Concesionario.Data\\ConcesionarioContext.cs",
+              "ViewState": "AgIAADUBAAAAAAAAAAAAAE0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T18:34:36.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthenticateContext.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\AuthenticateContext.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\AuthenticateContext.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\AuthenticateContext.cs",
+              "RelativeToolTip": "Concesionario.Data\\AuthenticateContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T18:32:13.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ApplicationUserIdentity.cs",
+              "DocumentMoniker": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Identity\\ApplicationUserIdentity.cs",
+              "RelativeDocumentMoniker": "Concesionario.Data\\Identity\\ApplicationUserIdentity.cs",
+              "ToolTip": "C:\\Users\\lvs_1\\Desktop\\Concesionaria\\concesionaria\\Concesionario.Data\\Identity\\ApplicationUserIdentity.cs",
+              "RelativeToolTip": "Concesionario.Data\\Identity\\ApplicationUserIdentity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T13:15:05.681Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

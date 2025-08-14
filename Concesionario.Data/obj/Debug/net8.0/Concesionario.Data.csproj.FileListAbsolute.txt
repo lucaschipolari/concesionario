@@ -1,0 +1,17 @@
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.csproj.AssemblyReference.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.AssemblyInfoInputs.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.AssemblyInfo.cs
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.csproj.CoreCompileInputs.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\bin\Debug\net8.0\Concesionario.Data.deps.json
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\bin\Debug\net8.0\Concesionario.Data.runtimeconfig.json
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\bin\Debug\net8.0\Concesionario.Data.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\bin\Debug\net8.0\Concesionario.Data.pdb
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\bin\Debug\net8.0\Concesionario.Domain.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\bin\Debug\net8.0\Concesionario.Domain.pdb
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesio.B0DE0176.Up2Date
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\refint\Concesionario.Data.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.pdb
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.genruntimeconfig.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\ref\Concesionario.Data.dll

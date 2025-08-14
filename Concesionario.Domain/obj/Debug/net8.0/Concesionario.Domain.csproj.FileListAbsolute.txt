@@ -1,0 +1,12 @@
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\bin\Debug\net8.0\Concesionario.Domain.deps.json
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\bin\Debug\net8.0\Concesionario.Domain.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\bin\Debug\net8.0\Concesionario.Domain.pdb
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.AssemblyInfoInputs.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.AssemblyInfo.cs
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\refint\Concesionario.Domain.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.pdb
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\ref\Concesionario.Domain.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.csproj.AssemblyReference.cache
