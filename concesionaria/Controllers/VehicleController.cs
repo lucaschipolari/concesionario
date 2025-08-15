@@ -1,4 +1,5 @@
-﻿using Concesionario.Application.Interfaces;
+﻿using Concesionario.Application.Dto.Vehicles;
+using Concesionario.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -32,18 +33,28 @@ namespace Concesionario.Api.Controllers
         }
 
         // GET api/<VehicleController>/5
-        [HttpGet("{id}")]
+        // [HttpGet("{id}")]
         //public async Task<IActionResult> GetVehicleById(int id)
         //{
         //    return ;
         //}
 
-        // POST api/<VehicleController>
+        //// POST api/<VehicleController>
         [HttpPost]
-        //public async Task<IActionResult> PostVehicle([FromBody] string value)
-        //{
+        public async Task<IActionResult> PostVehicle([FromBody] VehicleRequestDto value)
+        {
+            try
+            {
+               var result = await _vehicleService.AddVehicle(value);
+               return Ok(result);
+            }
+            catch (Exception ex) { 
 
-        //}
+                return BadRequest(ex.Message);
+
+            }
+
+        }
 
         // PUT api/<VehicleController>/5
         [HttpPut("{id}")]

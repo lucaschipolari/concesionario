@@ -12,9 +12,9 @@ namespace Concesionario.Data.Repositories
 {
     public class EfRepository : IRepository
     {
-        private readonly ConcesionarioContext _context;
+        private readonly ConcesionarioDbContext _context;
 
-        public EfRepository(ConcesionarioContext context)
+        public EfRepository(ConcesionarioDbContext context)
         {
             _context = context;
         }

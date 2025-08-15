@@ -15,3 +15,4 @@ C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.pdb
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.genruntimeconfig.cache
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\ref\Concesionario.Data.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Data\obj\Debug\net8.0\Concesionario.Data.sourcelink.json

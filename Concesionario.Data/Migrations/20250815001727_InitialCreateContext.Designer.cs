@@ -4,16 +4,19 @@ using Concesionario.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Concesionario.Data.Migrations.ApplicationDb
+namespace Concesionario.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ConcesionarioDbContext))]
+    [Migration("20250815001727_InitialCreateContext")]
+    partial class InitialCreateContext
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -129,6 +132,9 @@ namespace Concesionario.Data.Migrations.ApplicationDb
                     b.Property<Guid>("BranchId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("BranchId1")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("PositionId")
                         .HasColumnType("uniqueidentifier");
 
@@ -139,6 +145,8 @@ namespace Concesionario.Data.Migrations.ApplicationDb
                     b.HasKey("Id");
 
                     b.HasIndex("BranchId");
+
+                    b.HasIndex("BranchId1");
 
                     b.HasIndex("PositionId");
 
@@ -156,15 +164,17 @@ namespace Concesionario.Data.Migrations.ApplicationDb
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Position");
+                    b.ToTable("Positions", (string)null);
                 });
 
             modelBuilder.Entity("Concesionario.Domain.Entities.Core.User", b =>
@@ -235,6 +245,92 @@ namespace Concesionario.Data.Migrations.ApplicationDb
                     b.ToTable("Users", (string)null);
                 });
 
+            modelBuilder.Entity("Concesionario.Domain.Entities.Finance.FinancingPlan", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("InterestRate")
+                        .HasPrecision(5, 2)
+                        .HasColumnType("decimal(5,2)");
+
+                    b.Property<int>("NumberOfInstallments")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("SaleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasPrecision(15, 2)
+                        .HasColumnType("decimal(15,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FinancingPlans", (string)null);
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Finance.Installment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Amount")
+                        .HasPrecision(15, 2)
+                        .HasColumnType("decimal(15,2)");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("FinancingPlanId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FinancingPlanId");
+
+                    b.ToTable("Installments", (string)null);
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Finance.Payment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Amount")
+                        .HasPrecision(15, 2)
+                        .HasColumnType("decimal(15,2)");
+
+                    b.Property<Guid>("InstallmentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Method")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InstallmentId");
+
+                    b.ToTable("Payments", (string)null);
+                });
+
             modelBuilder.Entity("Concesionario.Domain.Entities.SalesReservation.Reservation", b =>
                 {
                     b.Property<Guid>("Id")
@@ -248,7 +344,8 @@ namespace Concesionario.Data.Migrations.ApplicationDb
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("ReservationAmount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(15, 2)
+                        .HasColumnType("decimal(15,2)");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
@@ -263,7 +360,9 @@ namespace Concesionario.Data.Migrations.ApplicationDb
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Reservation");
+                    b.HasIndex("VehicleId");
+
+                    b.ToTable("Reservations", (string)null);
                 });
 
             modelBuilder.Entity("Concesionario.Domain.Entities.SalesReservation.Sale", b =>
@@ -285,13 +384,116 @@ namespace Concesionario.Data.Migrations.ApplicationDb
                         .HasColumnType("int");
 
                     b.Property<decimal>("TotalAmount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(15, 2)
+                        .HasColumnType("decimal(15,2)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Sale");
+                    b.HasIndex("ReservationId");
+
+                    b.ToTable("Sales", (string)null);
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Vehicles.Vehicle", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Color")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("FuelType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LicensePlate")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<double?>("Mileage")
+                        .HasColumnType("float");
+
+                    b.Property<Guid>("ModelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Transmission")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VehicleType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Version")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LicensePlate")
+                        .IsUnique();
+
+                    b.HasIndex("ModelId");
+
+                    b.ToTable("Vehicles", (string)null);
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Vehicles.VehicleBrand", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VehicleBrands", (string)null);
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Vehicles.VehicleModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BrandId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.ToTable("VehicleModels", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -441,10 +643,14 @@ namespace Concesionario.Data.Migrations.ApplicationDb
             modelBuilder.Entity("Concesionario.Domain.Entities.Core.Employee", b =>
                 {
                     b.HasOne("Concesionario.Domain.Entities.Branches.Branch", "Branch")
-                        .WithMany("Employees")
+                        .WithMany()
                         .HasForeignKey("BranchId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("Concesionario.Domain.Entities.Branches.Branch", null)
+                        .WithMany("Employees")
+                        .HasForeignKey("BranchId1");
 
                     b.HasOne("Concesionario.Domain.Entities.Core.Position", "Position")
                         .WithMany("Employees")
@@ -465,12 +671,36 @@ namespace Concesionario.Data.Migrations.ApplicationDb
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Concesionario.Domain.Entities.Finance.Installment", b =>
+                {
+                    b.HasOne("Concesionario.Domain.Entities.Finance.FinancingPlan", null)
+                        .WithMany("Installments")
+                        .HasForeignKey("FinancingPlanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Finance.Payment", b =>
+                {
+                    b.HasOne("Concesionario.Domain.Entities.Finance.Installment", null)
+                        .WithMany("Payments")
+                        .HasForeignKey("InstallmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Concesionario.Domain.Entities.SalesReservation.Reservation", b =>
                 {
                     b.HasOne("Concesionario.Domain.Entities.Core.Customer", "Customer")
                         .WithMany("Reservations")
                         .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Concesionario.Domain.Entities.Vehicles.Vehicle", null)
+                        .WithMany()
+                        .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Customer");
@@ -480,9 +710,38 @@ namespace Concesionario.Data.Migrations.ApplicationDb
                 {
                     b.HasOne("Concesionario.Domain.Entities.Core.Customer", "Customer")
                         .WithMany("Sales")
-                        .HasForeignKey("CustomerId");
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Concesionario.Domain.Entities.SalesReservation.Reservation", null)
+                        .WithMany()
+                        .HasForeignKey("ReservationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Vehicles.Vehicle", b =>
+                {
+                    b.HasOne("Concesionario.Domain.Entities.Vehicles.VehicleModel", "Model")
+                        .WithMany("Vehicles")
+                        .HasForeignKey("ModelId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Model");
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Vehicles.VehicleModel", b =>
+                {
+                    b.HasOne("Concesionario.Domain.Entities.Vehicles.VehicleBrand", "Brand")
+                        .WithMany("Models")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Brand");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -558,6 +817,26 @@ namespace Concesionario.Data.Migrations.ApplicationDb
                     b.Navigation("Customer");
 
                     b.Navigation("Employee");
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Finance.FinancingPlan", b =>
+                {
+                    b.Navigation("Installments");
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Finance.Installment", b =>
+                {
+                    b.Navigation("Payments");
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Vehicles.VehicleBrand", b =>
+                {
+                    b.Navigation("Models");
+                });
+
+            modelBuilder.Entity("Concesionario.Domain.Entities.Vehicles.VehicleModel", b =>
+                {
+                    b.Navigation("Vehicles");
                 });
 #pragma warning restore 612, 618
         }

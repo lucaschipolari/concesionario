@@ -177,3 +177,4 @@ C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\concesionaria\bin\Debug\net8.
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\concesionaria\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\concesionaria\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\concesionaria\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\concesionaria\obj\Debug\net8.0\Concesionario.Api.sourcelink.json

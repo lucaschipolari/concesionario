@@ -15,3 +15,4 @@ C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\refint\Concesionario.Application.dll
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesionario.Application.pdb
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\ref\Concesionario.Application.dll
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionaria.Application\obj\Debug\net8.0\Concesionario.Application.sourcelink.json

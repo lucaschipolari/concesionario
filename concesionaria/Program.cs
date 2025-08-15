@@ -21,18 +21,11 @@ namespace Concesionario
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddDbContext<ConcesionarioContext>(options =>
+            builder.Services.AddDbContext<ConcesionarioDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("Concesionario"));
             });
 
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
-     options.UseSqlServer(builder.Configuration.GetConnectionString("Concesionario")));
-
-
-            // Configurar el contexto de Identity con tu AuthenticateContext y cadena de conexión
-            builder.Services.AddDbContext<AuthenticateContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("Concesionario")));
 
 
             builder.Services.AddIdentity<ApplicationUserIdentity, IdentityRole>(options =>
@@ -43,7 +36,7 @@ namespace Concesionario
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequiredLength = 6;
             })
-            .AddEntityFrameworkStores<ApplicationDbContext>() // Usás el nuevo contexto unificado
+            .AddEntityFrameworkStores<ConcesionarioDbContext>() // Usás el nuevo contexto unificado
             .AddDefaultTokenProviders();
 
             //Inyeccion de servicios
