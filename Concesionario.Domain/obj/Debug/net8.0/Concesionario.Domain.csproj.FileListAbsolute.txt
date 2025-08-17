@@ -10,3 +10,4 @@ C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debu
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.pdb
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\ref\Concesionario.Domain.dll
 C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.csproj.AssemblyReference.cache
+C:\Users\lvs_1\Desktop\Concesionaria\concesionaria\Concesionario.Domain\obj\Debug\net8.0\Concesionario.Domain.sourcelink.json

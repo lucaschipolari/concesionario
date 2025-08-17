@@ -7,6 +7,6 @@ using Concesionario.Domain.Entities.Vehicles;
 
 namespace Concesionario.Application.Dto.Vehicles
 {
-    public record VehicleResponseDto(string? LicensePlate,int Year, string? Color, string? Version, double? Mileage, string? Description,Transmission Transmission, FuelType FuelType, VehicleType VehicleType, VehicleStatus Status);
+    public record VehicleResponseDto(Guid Id,string? LicensePlate,int Year, string? Color, string? Version, double? Mileage, string? Description,Transmission Transmission, FuelType FuelType, VehicleType VehicleType, VehicleStatus Status);
 }
 

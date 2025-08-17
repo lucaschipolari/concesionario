@@ -8,6 +8,12 @@ namespace Concesionario.Domain.Entities.Vehicles
 {
     public class VehicleBrand : EntityBase
     {
+        public VehicleBrand(string name, string country)
+        {
+            Name = name;
+            Country = country;
+        }
+
         public string Name { get; set; } = string.Empty;
         public string Country { get; set; } = string.Empty;
 

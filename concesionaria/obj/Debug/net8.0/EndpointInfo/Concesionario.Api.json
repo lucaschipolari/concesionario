@@ -68,11 +68,81 @@
         }
       }
     },
+    "/api/Brands": {
+      "get": {
+        "tags": [
+          "Brands"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Brands"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleBrandRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleBrandRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleBrandRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Vehicle": {
       "get": {
         "tags": [
           "Vehicle"
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Vehicle"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleRequestDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -100,17 +170,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleRequestDto"
               }
             },
             "text/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleRequestDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleRequestDto"
               }
             }
           }
@@ -136,6 +206,47 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VehicleModel": {
+      "get": {
+        "tags": [
+          "VehicleModel"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "VehicleModel"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleModelRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleModelRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Vehicles.VehicleModelRequestDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -177,6 +288,117 @@
           }
         },
         "additionalProperties": false
+      },
+      "Concesionario.Application.Dto.Vehicles.VehicleBrandRequestDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Concesionario.Application.Dto.Vehicles.VehicleModelRequestDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "brandId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Concesionario.Application.Dto.Vehicles.VehicleRequestDto": {
+        "type": "object",
+        "properties": {
+          "licensePlate": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "mileage": {
+            "type": "number",
+            "format": "double"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "transmission": {
+            "$ref": "#/components/schemas/Concesionario.Domain.Entities.Vehicles.Transmission"
+          },
+          "fuelType": {
+            "$ref": "#/components/schemas/Concesionario.Domain.Entities.Vehicles.FuelType"
+          },
+          "vehicleType": {
+            "$ref": "#/components/schemas/Concesionario.Domain.Entities.Vehicles.VehicleType"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Concesionario.Domain.Entities.Vehicles.VehicleStatus"
+          },
+          "modelId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Concesionario.Domain.Entities.Vehicles.FuelType": {
+        "enum": [
+          "Petrol",
+          "Diesel",
+          "Electric",
+          "Hybrid"
+        ],
+        "type": "string"
+      },
+      "Concesionario.Domain.Entities.Vehicles.Transmission": {
+        "enum": [
+          "Manual",
+          "Automatic",
+          "SemiAutomatic",
+          "CVT",
+          "DualClutch"
+        ],
+        "type": "string"
+      },
+      "Concesionario.Domain.Entities.Vehicles.VehicleStatus": {
+        "enum": [
+          "Available",
+          "Reserved",
+          "Sold",
+          "Maintenance"
+        ],
+        "type": "string"
+      },
+      "Concesionario.Domain.Entities.Vehicles.VehicleType": {
+        "enum": [
+          "Car",
+          "Truck",
+          "Motorcycle",
+          "Van"
+        ],
+        "type": "string"
       }
     },
     "securitySchemes": {

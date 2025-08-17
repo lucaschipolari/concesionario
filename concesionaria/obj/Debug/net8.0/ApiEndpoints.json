@@ -32,6 +32,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Concesionario.Api.Controllers.BrandsController",
+    "Method": "GetBrands",
+    "RelativePath": "api/Brands",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.BrandsController",
+    "Method": "AddBrand",
+    "RelativePath": "api/Brands",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Concesionario.Application.Dto.Vehicles.VehicleBrandRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Concesionario.Api.Controllers.VehicleController",
     "Method": "GetVehicles",
     "RelativePath": "api/Vehicle",
@@ -43,7 +69,23 @@
   },
   {
     "ContainingType": "Concesionario.Api.Controllers.VehicleController",
-    "Method": "Put",
+    "Method": "PostVehicle",
+    "RelativePath": "api/Vehicle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "Concesionario.Application.Dto.Vehicles.VehicleRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.VehicleController",
+    "Method": "PutVehicle",
     "RelativePath": "api/Vehicle/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -55,18 +97,12 @@
         "IsRequired": true
       },
       {
-        "Name": "value",
-        "Type": "System.String",
+        "Name": "request",
+        "Type": "Concesionario.Application.Dto.Vehicles.VehicleRequestDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Concesionario.Api.Controllers.VehicleController",
@@ -89,5 +125,31 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.VehicleModelController",
+    "Method": "GetVehicleModels",
+    "RelativePath": "api/VehicleModel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.VehicleModelController",
+    "Method": "AddVehicleModel",
+    "RelativePath": "api/VehicleModel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Concesionario.Application.Dto.Vehicles.VehicleModelRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

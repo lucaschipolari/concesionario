@@ -221,6 +221,8 @@ namespace Concesionario.Data
                 eb.ToTable("VehicleBrands");
                 eb.HasKey(b => b.Id);
 
+                eb.HasIndex(b => b.Name).IsUnique();
+
                 eb.Property(b => b.Name).HasMaxLength(100).IsRequired();
                 eb.Property(b => b.Country).HasMaxLength(100).IsRequired();
 

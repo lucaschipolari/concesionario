@@ -58,9 +58,16 @@ namespace Concesionario.Api.Controllers
 
         // PUT api/<VehicleController>/5
         [HttpPut("{id}")]
-        public void Put(Guid id, [FromBody] string value)
+        public async Task<IActionResult> PutVehicle(Guid id, [FromBody] VehicleRequestDto request)
         {
+            try {
+                var result = await _vehicleService.UpdateVehicle(id, request);
+                return Ok(result);
 
+            } catch (Exception ex) { 
+            
+                return BadRequest(ex.Message);
+            }
         }
 
         // DELETE api/<VehicleController>/5

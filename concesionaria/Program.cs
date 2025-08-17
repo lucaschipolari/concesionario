@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System.Text.Json.Serialization;
 
 namespace Concesionario
 {
@@ -49,7 +50,12 @@ namespace Concesionario
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddAuthorization();
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
+
             builder.Services.AddScoped<JwtTokenService>();
 
             builder.Services.AddCors(options => {
@@ -64,7 +70,7 @@ namespace Concesionario
             });
             builder.Services.AddSwaggerGen(c =>
             {
-                c.CustomSchemaIds(type => type.FullName); // Usa el nombre completo con namespace
+                c.CustomSchemaIds(type => type.FullName); 
             });
 
             builder.Services.AddSwaggerGen(c => {
