@@ -14,6 +14,8 @@ namespace Concesionario.Application.Interfaces
 
         Task<VehicleResponseDto> UpdateVehicle(Guid id, VehicleRequestDto vehicleRequestDto);
 
+        Task DeleteVehicle(Guid id);
+
         Task<VehicleModelResponseDto?> AddVehicleModel(VehicleModelRequestDto request);
         Task<IEnumerable<VehicleModelResponseDto>?> GetVehicleModels();
 

@@ -1,5 +1,6 @@
 ﻿using Concesionario.Application.Dto.Vehicles;
 using Concesionario.Application.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,7 +16,6 @@ namespace Concesionario.Api.Controllers
         
             _vehicleService = vehicleService;
         }
-        // GET: api/<VehicleController>
         [HttpGet]
         public async Task<IActionResult> GetVehicles()
         {
@@ -33,13 +33,12 @@ namespace Concesionario.Api.Controllers
         }
 
         // GET api/<VehicleController>/5
-        // [HttpGet("{id}")]
+        //[HttpGet("{id}")]
         //public async Task<IActionResult> GetVehicleById(int id)
         //{
-        //    return ;
+        //    return;
         //}
 
-        //// POST api/<VehicleController>
         [HttpPost]
         public async Task<IActionResult> PostVehicle([FromBody] VehicleRequestDto value)
         {
@@ -56,7 +55,6 @@ namespace Concesionario.Api.Controllers
 
         }
 
-        // PUT api/<VehicleController>/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVehicle(Guid id, [FromBody] VehicleRequestDto request)
         {
@@ -70,10 +68,17 @@ namespace Concesionario.Api.Controllers
             }
         }
 
-        // DELETE api/<VehicleController>/5
         [HttpDelete("{id}")]
-        public void Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
+            try { 
+                await _vehicleService.DeleteVehicle(id);
+                return Ok();
+
+            } catch (Exception e){ 
+                return BadRequest(e.Message);
+            }
+
         }
     }
 }

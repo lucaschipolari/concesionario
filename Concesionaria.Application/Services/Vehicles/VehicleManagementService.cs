@@ -4,6 +4,7 @@ using Concesionario.Application.Exceptions;
 using Concesionario.Application.Interfaces;
 using Concesionario.Domain.Entities.Vehicles;
 using Concesionario.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using System;
@@ -22,11 +23,9 @@ namespace Concesionario.Application.Services.Vehicles
             _repository = repository;
         }
 
-
         public async Task<IEnumerable<VehicleResponseDto>?> GetVehicles() {
 
-            return (await _repository.GetAll<Vehicle>())?.Select(vehicle => new VehicleResponseDto(vehicle.Id,vehicle.LicensePlate, vehicle.Year, vehicle.Color, vehicle.Version, vehicle.Mileage, vehicle.Description, vehicle.Transmission, vehicle.FuelType, vehicle.VehicleType, vehicle.Status)); 
-
+            return (await _repository.GetFiltered<Vehicle>(v=>v.IsActive == true))?.Select(vehicle => new VehicleResponseDto(vehicle.Id,vehicle.LicensePlate, vehicle.Year, vehicle.Color, vehicle.Version, vehicle.Mileage, vehicle.Description, vehicle.Transmission, vehicle.FuelType, vehicle.VehicleType, vehicle.Status)); 
 
         }
         public async Task<VehicleResponseDto?> UpdateVehicle(Guid id,VehicleRequestDto vehicleRequestDto) {
@@ -63,6 +62,7 @@ namespace Concesionario.Application.Services.Vehicles
             return new VehicleResponseDto(existingVehicle.Id,existingVehicle.LicensePlate, existingVehicle.Year, existingVehicle.Color, existingVehicle.Version, existingVehicle.Mileage, existingVehicle.Description, existingVehicle.Transmission, existingVehicle.FuelType, existingVehicle.VehicleType, existingVehicle.Status);
 
         }
+       
         public async Task<VehicleResponseDto> AddVehicle(VehicleRequestDto vehicleRequestDto) {
 
             if (string.IsNullOrWhiteSpace(vehicleRequestDto.LicensePlate) ||
@@ -80,22 +80,23 @@ namespace Concesionario.Application.Services.Vehicles
             var model = await _repository.GetById<VehicleModel>(vehicleRequestDto.ModelId);
             if (model == null) throw new EntityNotFoundException("Modelo de vehiculo no encontrado");
             var vehicle= new Vehicle(
-     vehicleRequestDto?.LicensePlate,
-     vehicleRequestDto?.Year ?? 0,
-     vehicleRequestDto?.Color,
-     vehicleRequestDto?.Version,
-     vehicleRequestDto?.Mileage,
-     vehicleRequestDto?.Description,
-     vehicleRequestDto.Transmission,
-     vehicleRequestDto.FuelType,
-     vehicleRequestDto.VehicleType,
-     vehicleRequestDto.Status,
-     vehicleRequestDto.ModelId
+            vehicleRequestDto?.LicensePlate,
+            vehicleRequestDto?.Year ?? 0,
+            vehicleRequestDto?.Color,
+            vehicleRequestDto?.Version,
+            vehicleRequestDto?.Mileage,
+            vehicleRequestDto?.Description,
+            vehicleRequestDto.Transmission,
+            vehicleRequestDto.FuelType,
+            vehicleRequestDto.VehicleType,
+            vehicleRequestDto.Status,
+            vehicleRequestDto.ModelId
  );
             await _repository.Add(vehicle);
 
             return new VehicleResponseDto(vehicle.Id,vehicle.LicensePlate,vehicle.Year,vehicle.Color,vehicle.Version,vehicle.Mileage,vehicle.Description,vehicle.Transmission,vehicle.FuelType,vehicle.VehicleType,vehicle.Status);
         }
+       
         public async Task<VehicleModelResponseDto?> AddVehicleModel(VehicleModelRequestDto request) {
 
             if (string.IsNullOrWhiteSpace(request.Name)) {
@@ -145,6 +146,20 @@ namespace Concesionario.Application.Services.Vehicles
         public async Task<IEnumerable<VehicleBrandResponseDto>?> GetBrands()
         {
             return (await _repository.GetAll<VehicleBrand>())?.Select(m => new VehicleBrandResponseDto(m.Name,m.Country, m.Id));
+        }
+        public async Task DeleteVehicle(Guid id)
+        {
+
+            var existingVehicle = await _repository.GetById<Vehicle>(id);
+
+            if (existingVehicle == null) {
+                throw new EntityNotFoundException("No existe entidad con ese id");
+
+            }
+
+            await _repository.Delete(existingVehicle);
+
+
         }
     }
 }
