@@ -8,7 +8,9 @@ namespace Concesionario.Domain.Entities.Vehicles
 {
     public class Vehicle : EntityBase
     {
-        public Vehicle(string? licensePlate, int year, string? color, string? version, double? mileage, string? description, Transmission transmission, FuelType fuelType, VehicleType vehicleType, VehicleStatus status, Guid modelId)
+        public Vehicle( double? price, double? promotionalPrice,string? licensePlate, int year, string? color, string? version, double? mileage,
+            string? description, Transmission transmission, FuelType fuelType, VehicleType vehicleType,
+            VehicleStatus status, Guid modelId)
         {
             LicensePlate = licensePlate;
             Year = year;
@@ -22,6 +24,8 @@ namespace Concesionario.Domain.Entities.Vehicles
             Status = status;
             ModelId = modelId;
             IsActive = true;
+            Price = price;
+            PromotionalPrice = promotionalPrice;
         }
 
         public string? LicensePlate { get; set; }
@@ -30,6 +34,9 @@ namespace Concesionario.Domain.Entities.Vehicles
         public string? Version { get; set; }
         public double? Mileage { get; set; }
         public string? Description { get; set; }
+        public double? Price { get; set; }
+
+        public double? PromotionalPrice { get; set; }
 
         public Transmission Transmission { get; set; }
         public FuelType FuelType { get; set; }

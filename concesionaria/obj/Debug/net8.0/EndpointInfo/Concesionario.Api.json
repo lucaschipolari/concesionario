@@ -109,6 +109,37 @@
         }
       }
     },
+    "/api/User": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Core.UserRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Core.UserRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concesionario.Application.Dto.Core.UserRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Vehicle": {
       "get": {
         "tags": [
@@ -257,6 +288,38 @@
   },
   "components": {
     "schemas": {
+      "Concesionario.Application.Dto.Core.UserRequestDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dni": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "userType": {
+            "$ref": "#/components/schemas/Concesionario.Domain.Entities.Core.UserType"
+          }
+        },
+        "additionalProperties": false
+      },
       "Concesionario.Application.Dto.LoginModel": {
         "type": "object",
         "properties": {
@@ -320,6 +383,14 @@
       "Concesionario.Application.Dto.Vehicles.VehicleRequestDto": {
         "type": "object",
         "properties": {
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "promotionalPrice": {
+            "type": "number",
+            "format": "double"
+          },
           "licensePlate": {
             "type": "string",
             "nullable": true
@@ -362,6 +433,13 @@
           }
         },
         "additionalProperties": false
+      },
+      "Concesionario.Domain.Entities.Core.UserType": {
+        "enum": [
+          "Customer",
+          "Employee"
+        ],
+        "type": "string"
       },
       "Concesionario.Domain.Entities.Vehicles.FuelType": {
         "enum": [

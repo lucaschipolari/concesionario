@@ -47,6 +47,8 @@ namespace Concesionario.Application.Services.Vehicles
             {
                 throw new ArgumentException("Ya existe un vehiculo con esa matricula");
             }
+            existingVehicle.Price = vehicleRequestDto.Price;
+            existingVehicle.PromotionalPrice = vehicleRequestDto.PromotionalPrice;
             existingVehicle.Color= vehicleRequestDto.Color;
             existingVehicle.Version = vehicleRequestDto.Version;
             existingVehicle.Status = vehicleRequestDto.Status;
@@ -80,6 +82,8 @@ namespace Concesionario.Application.Services.Vehicles
             var model = await _repository.GetById<VehicleModel>(vehicleRequestDto.ModelId);
             if (model == null) throw new EntityNotFoundException("Modelo de vehiculo no encontrado");
             var vehicle= new Vehicle(
+            vehicleRequestDto.Price,
+            vehicleRequestDto.PromotionalPrice,
             vehicleRequestDto?.LicensePlate,
             vehicleRequestDto?.Year ?? 0,
             vehicleRequestDto?.Color,

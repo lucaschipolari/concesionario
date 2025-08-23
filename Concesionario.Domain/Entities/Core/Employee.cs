@@ -9,7 +9,7 @@ namespace Concesionario.Domain.Entities.Core
 {
     public class Employee : EntityBase
     {
-        public string UserId { get; set; }  
+        public Guid UserId { get; set; }  
         public User User { get; set; }
 
         public Guid BranchId { get; set; }

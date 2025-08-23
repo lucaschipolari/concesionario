@@ -9,7 +9,7 @@ namespace Concesionario.Domain.Entities.Core
 {
     public class Customer : EntityBase
     {
-        public string UserId { get; set; }  
+        public Guid UserId { get; set; }  
         public User User { get; set; }
 
         public ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();

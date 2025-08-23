@@ -1,6 +1,7 @@
 
 using Concesionario.Application.Interfaces;
 using Concesionario.Application.Services;
+using Concesionario.Application.Services.Core;
 using Concesionario.Application.Services.Vehicles;
 using Concesionario.Data;
 using Concesionario.Data.Identity;
@@ -29,7 +30,7 @@ namespace Concesionario
 
 
 
-            builder.Services.AddIdentity<ApplicationUserIdentity, IdentityRole>(options =>
+            builder.Services.AddIdentity<ApplicationUserIdentity, IdentityRole<Guid>>(options =>
             {
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
@@ -37,13 +38,15 @@ namespace Concesionario
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequiredLength = 6;
             })
-            .AddEntityFrameworkStores<ConcesionarioDbContext>() // Usás el nuevo contexto unificado
-            .AddDefaultTokenProviders();
+.AddEntityFrameworkStores<ConcesionarioDbContext>()
+.AddDefaultTokenProviders();
+
 
             //Inyeccion de servicios
 
             builder.Services.AddScoped<IRepository, EfRepository>();
             builder.Services.AddScoped<IVehicleService,VehicleManagementService>();
+            builder.Services.AddScoped<IUserService,UserManagementService>();
 
             ///
 
