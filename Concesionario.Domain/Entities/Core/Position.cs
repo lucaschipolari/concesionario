@@ -9,7 +9,7 @@ namespace Concesionario.Domain.Entities.Core
     public class Position : EntityBase
     {
         public string Name { get; set; }
-        public string Descripcion { get; set; }
+        public string Description { get; set; }
 
         public ICollection<Employee> Employees { get; set; } = new List<Employee>();
     }

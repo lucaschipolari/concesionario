@@ -14,6 +14,8 @@ namespace Concesionario.Application.Dto.Core
     bool IsActive,
     string Email,
     string Password,
-    UserType UserType
+    UserType UserType,
+    Guid? BranchId = null,
+    Guid? PositionId = null
 );
 }

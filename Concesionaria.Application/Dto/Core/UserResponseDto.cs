@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 namespace Concesionario.Application.Dto.Core
 {
     public record UserResponseDto(
+    Guid userId,
     string FullName,
     string DNI,
     string Phone,
     bool IsActive,
     string Email,
-    UserType UserType
+    UserType UserType,
+    string? BranchName = null,
+    string? PositionName = null
 );
 }

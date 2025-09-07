@@ -117,7 +117,7 @@ namespace Concesionario.Data
                     eb.HasKey(r => r.Id);
 
                     eb.Property(r => r.Name).HasMaxLength(50).IsRequired();
-                    eb.Property(r => r.Descripcion).HasMaxLength(100).IsRequired();
+                    eb.Property(r => r.Description).HasMaxLength(100).IsRequired();
                 });
 
                 // =========================
@@ -153,7 +153,13 @@ namespace Concesionario.Data
                     eb.HasKey(s => s.Id);
 
                     eb.Property(s => s.SaleDate).IsRequired();
-                    eb.Property(s => s.TotalAmount).HasPrecision(15, 2).IsRequired();
+                    eb.Property(s => s.FinalPrice).HasPrecision(15, 2).IsRequired();
+                    eb.Property(s => s.BasePrice).HasPrecision(15, 2).IsRequired();
+                    eb.Property(s => s.IVA).HasPrecision(15, 2).IsRequired();
+                    eb.Property(s => s.OtherTaxes).HasPrecision(15, 2).IsRequired();
+
+
+
                     eb.Property(s => s.Status).IsRequired();
 
                     eb.HasOne(s => s.Customer)

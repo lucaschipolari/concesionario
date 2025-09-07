@@ -10,6 +10,9 @@ namespace Concesionario.Application.Interfaces
     public interface IUserService
     {
         Task<UserResponseDto?> AddUser(UserRequestDto request);
+        Task<IEnumerable<UserResponseDto>> GetUsers();
+        Task<UserResponseDto> GetUserByName(string name);
+        Task<IEnumerable<UserResponseDto>?> GetEmployeesByBranchId(Guid id);
 
     }
 }

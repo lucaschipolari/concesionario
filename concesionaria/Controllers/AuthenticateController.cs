@@ -1,5 +1,6 @@
 ﻿using Azure.Identity;
 using Concesionario.Application.Dto;
+using Concesionario.Application.Interfaces;
 using Concesionario.Application.Services;
 using Concesionario.Data.Identity;
 using Microsoft.AspNetCore.Identity;
@@ -15,31 +16,45 @@ namespace Concesionario.Api.Controllers
     {
         private readonly UserManager<ApplicationUserIdentity> _userManager;
         private readonly SignInManager<ApplicationUserIdentity> _signInManager;
+        private readonly IUserService _userService;
         private readonly JwtTokenService _jwtTokenService;
 
         public AuthenticateController(UserManager<ApplicationUserIdentity> userManager,
             SignInManager<ApplicationUserIdentity> signInManager,
-            JwtTokenService jwtTokenService)
+            JwtTokenService jwtTokenService,IUserService userService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _jwtTokenService = jwtTokenService;
+            _userService = userService;
         }
 
 
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginModel request)
         {
-            var user = await _userManager.FindByNameAsync(request.Username);
-            if (user == null) {
+            var identityUser = await _userManager.FindByNameAsync(request.Username);
+            if (identityUser == null)
+            {
                 return Unauthorized("Usuario o contraseña incorrectos");
             }
 
-            var result = await _signInManager.CheckPasswordSignInAsync(user,request.Password,false);
-            if (!result.Succeeded) {
+            var result = await _signInManager.CheckPasswordSignInAsync(identityUser, request.Password, false);
+            if (!result.Succeeded)
+            {
                 return Unauthorized("Usuario o contraseña incorrectos");
             }
-            var token = _jwtTokenService.GenerateToken(request.Username);
+
+            // Buscar el usuario en tu tabla de negocio (Customer o Employee)
+            var appUser = await _userService.GetUserByName(request.Username); // o por username si lo preferís
+
+            if (appUser == null)
+            {
+                return Unauthorized("Usuario no registrado en el sistema");
+            }
+
+            var token = _jwtTokenService.GenerateToken(appUser.Email, appUser.userId); // 👈 este es el GUID correcto
+
             return Ok(new { token });
         }
         [HttpPost("register")]

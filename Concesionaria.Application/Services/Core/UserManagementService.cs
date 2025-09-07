@@ -4,9 +4,11 @@ using Concesionario.Application.Interfaces;
 using Concesionario.Data.Identity;
 using Concesionario.Domain.Entities.Core;
 using Concesionario.Domain.Entities.Vehicles;
+using BranchEntity = Concesionario.Domain.Entities.Branches.Branch;
 using Concesionario.Domain.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,20 +35,19 @@ namespace Concesionario.Application.Services.Core
                 string.IsNullOrWhiteSpace(userRequestDto.DNI) ||
                 string.IsNullOrWhiteSpace(userRequestDto.Phone) ||
                 string.IsNullOrWhiteSpace(userRequestDto.Email) ||
+                userRequestDto.Email.Contains("ñ") ||
                 string.IsNullOrWhiteSpace(userRequestDto.Password) ||
                 userRequestDto.UserType != UserType.Customer && userRequestDto.UserType != UserType.Employee)
             {
                 throw new ArgumentException("Valores para el usuario no válidos");
             }
 
-            // Validar que no exista un usuario con el mismo DNI
             var existingUser = await _repository.First<User>(u => u.DNI == userRequestDto.DNI);
             if (existingUser != null)
             {
                 throw new InvalidOperationException("Ya existe un usuario registrado con ese DNI.");
             }
 
-            // 1. Crear y guardar el User primero
             var user = new User
             {
                 FullName = userRequestDto.FullName,
@@ -58,7 +59,6 @@ namespace Concesionario.Application.Services.Core
             };
             await _repository.Add<User>(user);
 
-            // 2. Crear el ApplicationUserIdentity y asociar el User
             var appUser = new ApplicationUserIdentity
             {
                 UserName = userRequestDto.Email,
@@ -91,15 +91,27 @@ namespace Concesionario.Application.Services.Core
             }
             else if (userRequestDto.UserType == UserType.Employee)
             {
+
+                var existingBranch = await _repository.GetById<BranchEntity>(userRequestDto.BranchId.Value) ?? throw new ArgumentException("La sucursal especificada no existe.");
+                var existingPosition = await _repository.GetById<Position>(userRequestDto.PositionId.Value) ?? throw new ArgumentException("La posición especificada no existe.");
+
+                if (existingBranch == null || existingPosition == null)
+                {
+                    throw new ArgumentException("La sucursal o la posición especificada no existen.");
+                }
+
                 var employee = new Employee
                 {
                     UserId = user.Id,
                     User = user,
+                    BranchId = existingBranch.Id,
+                    PositionId = existingPosition.Id,
                 };
                 await _repository.Add<Employee>(employee);
             }
 
             return new UserResponseDto(
+                user.Id,
                 user.FullName,
                 user.DNI,
                 user.Phone,
@@ -109,6 +121,46 @@ namespace Concesionario.Application.Services.Core
             );
         }
 
+        public async Task<IEnumerable<UserResponseDto>?> GetUsers()
+        {
+            var users = await _repository.GetFiltered<User>(u => u.IsActive == true);
+            return users?.Select(user => new UserResponseDto(
+                user.Id,
+                user.FullName,
+                user.DNI,
+                user.Phone,
+                user.IsActive,
+                user.Email,
+                user.UserType
+            ));
+        }
+        public async Task<UserResponseDto?> GetUserByName(string email) {
+            var user = await _repository.First<User>(u => u.Email == email);
+            if (user == null) { 
+                return null;
+            }
+            return new UserResponseDto(
+                user.Id,
+                user.FullName,
+                user.DNI,
+                user.Phone,
+                user.IsActive,
+                user.Email,
+                user.UserType
+            );
+        } 
+        public async Task<IEnumerable<UserResponseDto>?> GetEmployeesByBranchId(Guid id) {
 
+            var employees = await _repository.GetFiltered<Employee>(e => e.BranchId == id && e.User.IsActive == true);
+            return employees?.Select(e => new UserResponseDto(
+                e.User.Id,
+                e.User.FullName,
+                e.User.DNI,
+                e.User.Phone,
+                e.User.IsActive,
+                e.User.Email,
+                e.User.UserType
+            )); 
+        }
     }
 }

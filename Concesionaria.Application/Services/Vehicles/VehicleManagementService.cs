@@ -28,6 +28,9 @@ namespace Concesionario.Application.Services.Vehicles
             return (await _repository.GetFiltered<Vehicle>(v=>v.IsActive == true))?.Select(vehicle => new VehicleResponseDto(vehicle.Id,vehicle.LicensePlate, vehicle.Year, vehicle.Color, vehicle.Version, vehicle.Mileage, vehicle.Description, vehicle.Transmission, vehicle.FuelType, vehicle.VehicleType, vehicle.Status)); 
 
         }
+        public async Task<IEnumerable<VehicleResponseDto>?> GetAvalibleVehicles() {
+            return (await _repository.GetFiltered<Vehicle>(v => v.Status == VehicleStatus.Available))?.Select(vehicle => new VehicleResponseDto(vehicle.Id, vehicle.LicensePlate, vehicle.Year, vehicle.Color, vehicle.Version, vehicle.Mileage, vehicle.Description, vehicle.Transmission, vehicle.FuelType, vehicle.VehicleType, vehicle.Status));
+        }
         public async Task<VehicleResponseDto?> UpdateVehicle(Guid id,VehicleRequestDto vehicleRequestDto) {
             if (string.IsNullOrWhiteSpace(vehicleRequestDto.LicensePlate) ||
              string.IsNullOrWhiteSpace(vehicleRequestDto.Color) ||
@@ -48,7 +51,6 @@ namespace Concesionario.Application.Services.Vehicles
                 throw new ArgumentException("Ya existe un vehiculo con esa matricula");
             }
             existingVehicle.Price = vehicleRequestDto.Price;
-            existingVehicle.PromotionalPrice = vehicleRequestDto.PromotionalPrice;
             existingVehicle.Color= vehicleRequestDto.Color;
             existingVehicle.Version = vehicleRequestDto.Version;
             existingVehicle.Status = vehicleRequestDto.Status;
@@ -83,7 +85,6 @@ namespace Concesionario.Application.Services.Vehicles
             if (model == null) throw new EntityNotFoundException("Modelo de vehiculo no encontrado");
             var vehicle= new Vehicle(
             vehicleRequestDto.Price,
-            vehicleRequestDto.PromotionalPrice,
             vehicleRequestDto?.LicensePlate,
             vehicleRequestDto?.Year ?? 0,
             vehicleRequestDto?.Color,

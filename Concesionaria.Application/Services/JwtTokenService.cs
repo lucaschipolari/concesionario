@@ -18,27 +18,30 @@ namespace Concesionario.Application.Services
         _config = config;
         }
 
-        public string GenerateToken(string username) {
-
+        public string GenerateToken(string username, Guid userId)
+        {
             var jwtConfig = _config.GetSection("Jwt");
             var keyText = jwtConfig["Key"] ?? throw new ArgumentException("Jwt Key");
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyText));
-            var creds = new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
-        new Claim(JwtRegisteredClaimNames.Sub,username),
-        new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
-        };
+        new Claim(JwtRegisteredClaimNames.Sub, username),
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        new Claim("userId", userId.ToString()) 
+    };
+
             var token = new JwtSecurityToken(
                 issuer: jwtConfig["Issuer"],
-            audience: jwtConfig["Audience"],
-            claims: claims,
-            expires: DateTime.Now.AddMinutes(double.Parse(jwtConfig["ExpireInMinutes"] ?? "60")),
-            signingCredentials: creds
-                );
-        return new JwtSecurityTokenHandler().WriteToken(token);
-        }  
+                audience: jwtConfig["Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(double.Parse(jwtConfig["ExpireInMinutes"] ?? "60")),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
 
 
     }

@@ -32,6 +32,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Concesionario.Api.Controllers.BranchController",
+    "Method": "AddBranch",
+    "RelativePath": "api/Branch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Concesionario.Application.Dto.Branch.BranchRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.BranchController",
+    "Method": "GetBranches",
+    "RelativePath": "api/Branch",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Concesionario.Api.Controllers.BrandsController",
     "Method": "GetBrands",
     "RelativePath": "api/Brands",
@@ -58,6 +84,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Concesionario.Api.Controllers.PositionController",
+    "Method": "AddPosition",
+    "RelativePath": "api/Position",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Concesionario.Application.Dto.Core.Employee.PositionRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.PositionController",
+    "Method": "GetPositions",
+    "RelativePath": "api/Position",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.SaleController",
+    "Method": "AddSale",
+    "RelativePath": "api/Sale",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Concesionario.Application.Dto.SaleReservation.SaleRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.SaleController",
+    "Method": "GetSales",
+    "RelativePath": "api/Sale",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Concesionario.Api.Controllers.UserController",
     "Method": "AddUser",
     "RelativePath": "api/User",
@@ -68,6 +146,32 @@
       {
         "Name": "request",
         "Type": "Concesionario.Application.Dto.Core.UserRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.UserController",
+    "Method": "GetUsers",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.UserController",
+    "Method": "GetEmployeesByBranchId",
+    "RelativePath": "api/User/employees/{branchId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "branchId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -157,6 +261,27 @@
       {
         "Name": "request",
         "Type": "Concesionario.Application.Dto.Vehicles.VehicleModelRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concesionario.Api.Controllers.SaleController",
+    "Method": "AddSaleReservation",
+    "RelativePath": "reservas/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Concesionario.Application.Dto.SaleReservation.SaleRequestDto",
         "IsRequired": true
       }
     ],

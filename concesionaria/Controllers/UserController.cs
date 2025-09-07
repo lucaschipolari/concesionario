@@ -29,5 +29,31 @@ namespace Concesionario.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpGet]
+        public async Task<IActionResult> GetUsers()
+        {
+            try
+            {
+                var users = await _userService.GetUsers();
+                return Ok(users);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpGet("employees/{branchId}")]
+        public async Task<IActionResult> GetEmployeesByBranchId(Guid branchId)
+        {
+            try
+            {
+                var employees = await _userService.GetEmployeesByBranchId(branchId);
+                return Ok(employees);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
     }
 }

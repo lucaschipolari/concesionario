@@ -9,8 +9,10 @@ namespace Concesionario.Application.Interfaces
 {
     public interface IVehicleService
     {
-       Task<IEnumerable<VehicleResponseDto>?> GetVehicles();
-       Task<VehicleResponseDto> AddVehicle(VehicleRequestDto vehicleRequestDto);
+        Task<IEnumerable<VehicleResponseDto>?> GetVehicles();
+
+        Task<IEnumerable<VehicleResponseDto>?> GetAvalibleVehicles();
+        Task<VehicleResponseDto> AddVehicle(VehicleRequestDto vehicleRequestDto);
 
         Task<VehicleResponseDto> UpdateVehicle(Guid id, VehicleRequestDto vehicleRequestDto);
 

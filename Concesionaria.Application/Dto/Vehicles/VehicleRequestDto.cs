@@ -8,5 +8,5 @@ using Concesionario.Domain.Entities.Vehicles;
 
 namespace Concesionario.Application.Dto.Vehicles
 {
-    public record VehicleRequestDto(double Price,double PromotionalPrice,string LicensePlate, int Year, string Color, string Version, double Mileage, string Description, Transmission Transmission, FuelType FuelType, VehicleType VehicleType, VehicleStatus Status,Guid ModelId);
+    public record VehicleRequestDto(decimal Price,string LicensePlate, int Year, string Color, string Version, double Mileage, string Description, Transmission Transmission, FuelType FuelType, VehicleType VehicleType, VehicleStatus Status,Guid ModelId);
 }

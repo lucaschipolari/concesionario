@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Concesionario.Data.Migrations
 {
     [DbContext(typeof(ConcesionarioDbContext))]
-    [Migration("20250823144140_FixUserIsActive")]
-    partial class FixUserIsActive
+    [Migration("20250825221610_InitialContext")]
+    partial class InitialContext
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -184,7 +184,7 @@ namespace Concesionario.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Descripcion")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");

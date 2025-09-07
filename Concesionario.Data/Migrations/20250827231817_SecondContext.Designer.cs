@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Concesionario.Data.Migrations
 {
     [DbContext(typeof(ConcesionarioDbContext))]
-    [Migration("20250823142734_UserModification")]
-    partial class UserModification
+    [Migration("20250827231817_SecondContext")]
+    partial class SecondContext
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -184,7 +184,7 @@ namespace Concesionario.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Descripcion")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -369,10 +369,32 @@ namespace Concesionario.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<decimal>("BasePrice")
+                        .HasPrecision(15, 2)
+                        .HasColumnType("decimal(15,2)");
+
                     b.Property<Guid?>("CustomerId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ReservationId")
+                    b.Property<Guid?>("EmployeeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("FinalPrice")
+                        .HasPrecision(15, 2)
+                        .HasColumnType("decimal(15,2)");
+
+                    b.Property<decimal>("IVA")
+                        .HasPrecision(15, 2)
+                        .HasColumnType("decimal(15,2)");
+
+                    b.Property<decimal>("OtherTaxes")
+                        .HasPrecision(15, 2)
+                        .HasColumnType("decimal(15,2)");
+
+                    b.Property<Guid?>("ReservationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("ReservationId1")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("SaleDate")
@@ -381,15 +403,20 @@ namespace Concesionario.Data.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TotalAmount")
-                        .HasPrecision(15, 2)
-                        .HasColumnType("decimal(15,2)");
+                    b.Property<Guid?>("VehicleId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
 
+                    b.HasIndex("EmployeeId");
+
                     b.HasIndex("ReservationId");
+
+                    b.HasIndex("ReservationId1");
+
+                    b.HasIndex("VehicleId");
 
                     b.ToTable("Sales", (string)null);
                 });
@@ -426,11 +453,8 @@ namespace Concesionario.Data.Migrations
                     b.Property<Guid>("ModelId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<double?>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("PromotionalPrice")
-                        .HasColumnType("float");
+                    b.Property<decimal?>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Status")
                         .IsRequired()
@@ -735,13 +759,30 @@ namespace Concesionario.Data.Migrations
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Restrict);
 
+                    b.HasOne("Concesionario.Domain.Entities.Core.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId");
+
                     b.HasOne("Concesionario.Domain.Entities.SalesReservation.Reservation", null)
                         .WithMany()
                         .HasForeignKey("ReservationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Concesionario.Domain.Entities.SalesReservation.Reservation", "Reservation")
+                        .WithMany()
+                        .HasForeignKey("ReservationId1");
+
+                    b.HasOne("Concesionario.Domain.Entities.Vehicles.Vehicle", "Vehicle")
+                        .WithMany()
+                        .HasForeignKey("VehicleId");
 
                     b.Navigation("Customer");
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Reservation");
+
+                    b.Navigation("Vehicle");
                 });
 
             modelBuilder.Entity("Concesionario.Domain.Entities.Vehicles.Vehicle", b =>
